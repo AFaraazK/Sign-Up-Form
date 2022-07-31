@@ -1,43 +1,103 @@
+:root{
+    --purple: rgb(249, 86, 255) 
+}
 *{
     box-sizing: border-box;
 }
 body{
-    background:black;
+    background:#0f0725;
     color:white;
     display:flex;
     padding: 0;
     margin: 0;
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
-
-img{
+.image{
+    position: relative;
+}
+.image img{
     height: calc(100vh - 4px);
+}
+.image .overlay{
+    position: absolute;
+    top:5%;
+    width: 100%;
+    height: 100px;
+    text-align: center;
+}
+.image .overlay h1{
+    text-shadow: #0f0725;
 }
 
 .formSection{
     display: flex;
     flex-direction: column;
+    justify-content: center;
     padding: 48px;
     margin:12px;
 }
 .introText{
     max-width: 500px;
     font-weight: bold;
+    opacity: 75%;
 }
 .hookText{
     font-weight: bold;
     margin-top: 0px;
+    opacity: 75%;
 }
 
+form{
+    margin: 30px 0;
+}
+.formOpen{
+    font-weight: bold;
+    font-size: 1.3rem;
+}
 .inputFields{
     display: flex;
     justify-content: space-between;
     margin-top: 16px;
 }
 .left,.right{
-    width: 200px;
+    width: 220px;
 }
+
 input{
     width: 100%;
-    margin-bottom: 16px;
+    margin-bottom: 12px;
+    margin-top: 3px;
+    height: 32px;
+    background: none;
+    color:white;
 }
+input:focus{
+    border-color:var(--purple);
+    outline:0;
+}
+.inputFields label{
+    color:#AAA;
+    font-size: 0.7rem;
+}
+
+.createAcc{
+    width:fit-content;
+    padding: 8px 32px;
+    color: var(--purple);
+    background: none;
+    border: 3px solid var(--purple);
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    margin-top:10px;
+}
+.createAcc:hover{
+    transition: 300ms;
+    color:white;
+    background: var(--purple);
+    cursor: pointer;
+}
+.already a{
+    text-decoration: none;
+    margin-left: 4px;
+    color:var(--purple)
+} 
